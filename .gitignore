@@ -21,3 +21,35 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/bin/
+# maven noise
+target/
+
+# gradle noise
+.gradle
+
+# osx noise
+.DS_Store
+profile
+
+# IntelliJ Idea noise
+.idea
+*.iws
+*.ipr
+*.iml
+*.releaseBackup
+atlassian-ide-plugin.xml
+
+# NB noise
+nbactions.xml
+nb-configuration.xml
+
+# Eclipse noise
+.settings
+.settings/*
+.project
+.classpath
+
+# Maven plugins noise
+dependency-reduced-pom.xml
+pom.xml.versionsBacku
