@@ -7,6 +7,7 @@ public class Block {
 	public String previousHash;
 	private String data; //our data will be a simple message.
 	private long timeStamp; 
+	private int nonce; ///
 
 	//Block Constructor.
 	public Block(String data,String previousHash ) {
@@ -26,4 +27,6 @@ public class Block {
 				);
 		return calculatedhash;
 	}
+	
+	
 }

@@ -1,6 +1,8 @@
 package sw2_a2;
 
 import java.util.ArrayList;
+import java.util.Scanner;
+
 import com.google.gson.GsonBuilder;
 
 public class BlockChain {
@@ -28,7 +30,7 @@ public class BlockChain {
 			}
 			
 		}
-		
+		System.out.println("The blockchain is valid :)");
 		return true;
 		
 	}
@@ -47,6 +49,14 @@ public class BlockChain {
 		String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);		
 		
 		System.out.println(blockchainJson);
+		
+		System.out.println("To check the blockchin's validity press 1");
+		Scanner sc= new Scanner(System.in);
+		int inp= sc.nextInt();
+		if(inp == 1) {
+			BlockChain c= new BlockChain();
+			c.isValid();
+		}
 	}
 
 }
