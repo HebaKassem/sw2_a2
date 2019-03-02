@@ -1,7 +1,5 @@
 package sw2_a2;
-
-
-import java.security.MessageDigest;
+import java.security.MessageDigest; //to use SHA256
 
 public class StringUtil {
 	
