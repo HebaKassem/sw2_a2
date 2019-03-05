@@ -8,7 +8,7 @@ import com.google.gson.GsonBuilder;
 public class BlockChain {
 	
 	public static ArrayList<Block> blockchain = new ArrayList<Block>();
-	public static int difficulty = 4;
+	public static int difficulty = 5;
 	
 	public static void main(String[] args) {
 
@@ -33,7 +33,7 @@ public class BlockChain {
 		
 		System.out.println(blockchainJson);
 		
-		System.out.println("To check the blockchin's validity press 1");
+		System.out.println("To check the blockchain's validity press 1");
 		Scanner sc= new Scanner(System.in);
 		int inp= sc.nextInt();
 		if(inp == 1) {
