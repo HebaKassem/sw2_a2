@@ -1,5 +1,6 @@
 package sw2_a2;
 
+import java.security.Security;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -45,8 +46,8 @@ public class BlockChain {
 		
 		Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider()); 
 		//Create the new wallets
-		walletA = new Wallet();
-		walletB = new Wallet(); 
+		Wallet walletA = new Wallet();
+		Wallet walletB = new Wallet(); 
 		//Test public and private keys
 		System.out.println("Private and public keys:");
 		System.out.println(StringUtil.getStringFromKey(walletA.privateKey));
@@ -64,7 +65,10 @@ public class BlockChain {
 	public static Boolean isValid() {
 		Block currentBlock;
 		Block previousBlock;
-		String hashTarget= new String(new char[difficulty]).replace('\0','0');
+		String hashTarget = ""; 
+		for(int i=0; i< difficulty; i++) {
+			hashTarget+='0';
+		}
 		
 		for(int i=1; i < blockchain.size(); i++) {
 			currentBlock= blockchain.get(i);
