@@ -89,16 +89,22 @@ public class BlockChain {
 		System.out.println("\nWalletA's balance is: " + walletA.getBalance());
 		System.out.println("WalletB's balance is: " + walletB.getBalance());
 		
+		/*
+		String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);		
+		
+		System.out.println(blockchainJson);
+		
+		*/
+		System.out.println("********************************************");
+
 		System.out.println("To check the blockchain's validity press 1");
 		Scanner sc= new Scanner(System.in);
 		int inp= sc.nextInt();
 		if(inp == 1) {
-			BlockChain c= new BlockChain();
-			c.isValid();
+			isValid();
 		}
 		
 		
-		//isValid();
 		
 	} catch (Exception ex) {
         ex.printStackTrace();

@@ -19,13 +19,12 @@ public class MulticastSocketClient {
         // the incoming bytes containing the information from the server.
         // Since the message is small here, 256 bytes should be enough.
         byte[] buf = new byte[256];
-        System.out.println("to query the longest valid blockchain on the network, press 1..");
+      /*  System.out.println("to query the longest valid blockchain on the network, press 1..");
         Scanner sc = new Scanner(System.in); 
         
-        // String input 
         int inp = sc.nextInt(); 
         if(inp == 1) {}
-
+*/
         // Create a new Multicast socket (that will allow other sockets/programs
         // to join it as well.
         try (MulticastSocket clientSocket = new MulticastSocket(PORT)){

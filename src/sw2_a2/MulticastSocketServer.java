@@ -18,7 +18,7 @@ public class MulticastSocketServer extends BlockChain {
       
         // Open a new DatagramSocket, which will be used to send the data.
         try (DatagramSocket serverSocket = new DatagramSocket()) {
-            for (int i = 0; i < 5; i++) {
+           /* for (int i = 0; i < 5; i++) {
                 String msg = "Sent message no " + i;
  
                 // Create a packet that will contain the data
@@ -32,7 +32,7 @@ public class MulticastSocketServer extends BlockChain {
 
                 Thread.sleep(500);
             }
-            
+            */
 
             String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);		
     		    		
